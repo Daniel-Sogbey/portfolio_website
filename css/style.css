@@ -20,8 +20,8 @@ body {
 
 h1 {
     color:var(--text-color);
-    font-size: 40px;
-    letter-spacing: -4px;
+    font-size: 35px;
+    letter-spacing: -3px;
     margin-bottom: 20px;    
 }
 
