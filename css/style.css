@@ -78,6 +78,10 @@ nav ul li {
     align-items: center;
 }
 
+main ul i {
+    margin-right:10px;
+}
+
 .wb-body {
     background-color: #111;
     padding:20px;
