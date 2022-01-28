@@ -103,10 +103,12 @@ form input[type="text"], form input[type="email"], form input[type="number"] {
     background-color: #333;
     color: #ccc;
     font-size: 15px;
+    background-color: #fff;
 }
 
 .btn  {
     width: 100%;
+    color: #fff;
     border:none;
     background-color: transparent;
     font-size: 18px;
