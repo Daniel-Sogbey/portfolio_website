@@ -57,11 +57,30 @@ router.get("/paystack/callback", async (req, res) => {
 		Payment.create(payment)
 			.then(payment => {
 				if (payment) {
-					res.status(200).send({ payment });
+					// res.status(200).send({ payment });
+					res.redirect("/success-payment/" + payment._id);
 				}
 			})
 			.catch(err => res.status(500).send(err));
 	});
+});
+
+router.get("/success-payment/:id", async (req, res) => {
+	const id = req.params.id;
+
+	try {
+		if (!id) {
+			return;
+		}
+
+		const payment = await Payment.findById(id);
+
+		if (payment) {
+			return res.status(200).render("error.pug", { payment });
+		}
+	} catch (error) {
+		return res.status(500).render("error.pug", { payment });
+	}
 });
 
 module.exports = router;

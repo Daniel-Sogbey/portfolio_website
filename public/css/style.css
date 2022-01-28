@@ -79,6 +79,13 @@ nav ul li {
     align-items: center;
 }
 
+.card {
+    background-color: #444;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 3px 2px #333;
+}
+
 main ul i {
     margin-right:10px;
 }
