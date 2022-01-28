@@ -151,3 +151,9 @@ blink {
         color:var(--text-color);
     }
 }
+
+@media (max-width:600px) {
+    .card{
+        margin: 10px;
+    }
+}
