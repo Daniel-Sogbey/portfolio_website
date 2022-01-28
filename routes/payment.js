@@ -20,7 +20,10 @@ router.post("/payment", async (req, res) => {
 	form.amount *= 100;
 
 	initializeTransaction(form, (error, body) => {
-		if (error) return res.status(500).send(error);
+		if (error) {
+			res.status(500).send(error);
+			return;
+		}
 
 		let response = JSON.parse(body);
 
@@ -76,7 +79,7 @@ router.get("/success-payment/:id", async (req, res) => {
 		const payment = await Payment.findById(id);
 
 		if (payment) {
-			return res.status(200).render("error.pug", { payment });
+			return res.status(200).render("success.pug", { payment });
 		}
 	} catch (error) {
 		return res.status(500).render("error.pug", { payment });
