@@ -1,5 +1,6 @@
 extends layout
 block content
+  include includes/header.pug 
   main
     h1
       | daniel_sogbey__ : $
@@ -20,9 +21,12 @@ block content
         a(href='https://www.instagram.com/dan_sogbey/', target='_blank') Instagram
       li
         i.fab.fa-github
-        a(href='https://github.com/Daniel-Sogbey', target='_blacn') GitHub
+        a(href='https://github.com/Daniel-Sogbey', target='_blank') GitHub
     button#donate-btn.btn Buy me a cup of coffee
-    
+    .login-signup
+      button.signup Sign up
+      p.login Login
+    //- #map
     .hidden
       #form-content
         form(action='/payment', method='post')
