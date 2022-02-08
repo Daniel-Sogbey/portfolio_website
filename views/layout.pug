@@ -10,25 +10,11 @@ html(lang='en')
     link(rel='shortcut icon', href='/images/grandfather.png', type='image/x-icon')
     link(rel='stylesheet', href='')
     link(rel='stylesheet', href='/css/style.css')
-    script.
-      function initMap() {
-  // The location of Uluru
-        console.log("Init Map");
-        const uluru = { lat: -25.344, lng: 131.036 };
-  // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-          });
-  // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-          });
-        }
-    block content
-  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyABudyAe0AzweYaTWCNc926AWE2iBFq-vA')
+    link(rel='stylesheet', href='/css/shop-style.css')
+  include includes/header.pug 
+  block content
   script(src='js/winbox.bundle.js')
   script(src='js/main.js')
+  script(src='js/shop.js')
     
 

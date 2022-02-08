@@ -55,7 +55,9 @@ nav {
     width: 100%;
 }
 
-nav ul {
+.navbar nav ul {
+    max-width: 600px;
+    margin: 10px  auto;
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -76,7 +78,6 @@ nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .card {
@@ -86,8 +87,15 @@ nav ul li {
     box-shadow: 0 3px 2px #333;
 }
 
-main ul i {
+.container ul i {
     margin-right:10px;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .wb-body {
@@ -176,7 +184,10 @@ blink {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:500px) {
+    .navbar{
+        height: 110px;
+    }
     .card{
         margin: 10px;
     }

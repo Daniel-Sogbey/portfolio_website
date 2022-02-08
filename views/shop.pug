@@ -1,0 +1,13 @@
+extends layout
+block content
+        .shop-container
+            for product in products
+                .shop-card
+                    - var img = product.image
+                    .top
+                        img(src= img, alt="product image")
+                        li.item-name #{product.name}
+                    li GHS #{product.price}
+                    button#addToCart.btn.btn-primary.btn-sm.add-to-cart(type="button") Add to cart
+
+        

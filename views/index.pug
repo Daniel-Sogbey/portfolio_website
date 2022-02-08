@@ -1,7 +1,6 @@
 extends layout
 block content
-  include includes/header.pug 
-  main
+  .container
     h1
       | daniel_sogbey__ : $
       span.cursor  | 
@@ -23,10 +22,6 @@ block content
         i.fab.fa-github
         a(href='https://github.com/Daniel-Sogbey', target='_blank') GitHub
     button#donate-btn.btn Buy me a cup of coffee
-    .login-signup
-      button.signup Sign up
-      p.login Login
-    //- #map
     .hidden
       #form-content
         form(action='/payment', method='post')
