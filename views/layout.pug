@@ -10,25 +10,22 @@ html(lang='en')
     link(rel='shortcut icon', href='/images/grandfather.png', type='image/x-icon')
     link(rel='stylesheet', href='')
     link(rel='stylesheet', href='/css/style.css')
-    script.
-      function initMap() {
-  // The location of Uluru
-        console.log("Init Map");
-        const uluru = { lat: -25.344, lng: 131.036 };
-  // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-          });
-  // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-          });
-        }
-    block content
-  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyABudyAe0AzweYaTWCNc926AWE2iBFq-vA')
-  script(src='js/winbox.bundle.js')
-  script(src='js/main.js')
-    
+    script(async='', src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5732804009654056', crossorigin='anonymous')
+  .container
+    nav
+      ul
+        li#about /about
+        li#contact /contact
+        li#services /services
+        li#open-source /open-source
+        li#shop /shop
+    body
+      block content
+      script(async='', src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5732804009654056', crossorigin='anonymous')
+      // firstAD
+      ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-5732804009654056', data-ad-slot='8698362498', data-ad-format='auto', data-full-width-responsive='true')
+      script.
+        (adsbygoogle = window.adsbygoogle || []).push({})
 
+    script(src='js/winbox.bundle.js')
+    script(src='js/main.js')
