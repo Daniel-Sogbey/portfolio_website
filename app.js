@@ -28,8 +28,6 @@ app.use(paymentRouter);
 
 //home route
 app.get("/", (req, res) => {
-	console.log(req.body);
-	console.log(process.env.PAYSTACK_KEY);
 	res.render(`index.pug`);
 });
 
