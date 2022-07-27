@@ -7,7 +7,6 @@ const path = require("path");
 const express = require("express");
 const pug = require("pug");
 const bodyParser = require("body-parser");
-
 //routers
 const paymentRouter = require("./routes/payment");
 const shopRouter = require("./routes/shop");
